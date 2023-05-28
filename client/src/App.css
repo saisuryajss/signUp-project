@@ -1,0 +1,134 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;background-image: linear-gradient(to right top, #17212b, #1a2837, #1f2e44, #253551, #2e3b5e);
+
+}
+body{
+  box-sizing: border-box;
+  overflow: hidden;
+  margin:0px;
+}
+
+.SignUpContainer{
+  width:30vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+  min-height: 620px;
+  margin-top: 10vh;
+  background-color: white;
+  border-radius: 5px;
+  background-color: #17212B;
+  color:white;
+  min-width: 410px;
+}
+
+.SignUpContainer h2{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: 'Poppins','sans-serif';
+  text-align: center;
+  width: 8rem;
+}
+
+.SignUpContainer input,.SignUpContainer button{
+  width: 20rem;
+  height: 3rem;
+  border-radius: 5px;
+  border:1px solid black;
+  font-size: 1.2rem;
+  padding-left: 10px;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  color:black;
+}
+
+.SignUpContainer button div{
+  /* background-image: url('../../assets/google.png'); */
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.SignUpContainer button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.SignUpContainer label{
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.SignUpContainer button[type='submit']{
+  background-color: #6ab2f2;
+  border:none;
+  outline: none;
+  color:white;
+}
+
+.SignUpForm{
+  display: flex;
+  flex-direction: column;
+}
+
+.SignUpContainer h6{
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: -5px;
+}
+
+.SignUpContainer h6 a{
+  color:blue;
+  cursor: pointer;
+}
+
+.SignUpContainer h4{
+  text-align: end;
+  margin: 0px 0px 20px 0px;
+}
+
+.SignUpContainer h4 a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.userExists{
+  width: fit-content;
+  margin-top: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userExists div{
+  margin: 20px;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:white;
+  font-weight: 800;
+}
+
+.userExists button{
+  width: 7rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  border:none;
+  outline:none;
+  background-color:violet;
+  color:black;
+  cursor: pointer;
+}
