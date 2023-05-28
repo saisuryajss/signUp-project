@@ -4,6 +4,7 @@ const connectDB = require('./utils/db');
 const { API_ENDPOINT_NOT_FOUND, SERVER_ERR } = require('./utils/error');
 const morgan = require('morgan');
 const cors = require('cors');
+const path = require('path')
 
 const app=express();
 const userRouter = require('./routers/userRouter');
