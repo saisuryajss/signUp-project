@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URI = 'http://localhost:5000/api/';
+const BASE_URI = process.env.REACT_APP_BASE||'http://localhost:5000/api/';
 const INVALID_DATA = {
     status: 'error',
     message: 'missing or invalid data'
