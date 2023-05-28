@@ -1,4 +1,3 @@
-import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './userSaga';
 import { persistStore, persistReducer } from 'redux-persist';
@@ -32,7 +31,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
-    middleware: [sagaMiddleware,logger],
+    middleware: [sagaMiddleware],
     reducer: persistedReducer
 });
 

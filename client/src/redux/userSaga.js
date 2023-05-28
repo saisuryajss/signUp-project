@@ -5,7 +5,7 @@ import { toast } from 'react-hot-toast';
 
 function* signUp({ payload }) {
     const response = yield registerUser(payload);
-    console.log(response);
+    // console.log(response);
     if (response.status === 'ok') {
         yield put({ type: userActionTypes.SIGN_UP_SUCCESS, payload: response.data });
         toast.success('registration successful');

@@ -33,7 +33,7 @@ async function serverRequest(url, method, data, headers) {
         return responseData;
     }
     catch (error) {
-        console.log(error);
+        // console.log(error);
         if (error && error.response &&error.response.data) {
             const { message } = error.response.data;
             const responseData = {
