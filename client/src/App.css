@@ -3,17 +3,19 @@
   height: 100vh;
   overflow: hidden;
   display: flex;
-  justify-content: center;background-image: linear-gradient(to right top, #17212b, #1a2837, #1f2e44, #253551, #2e3b5e);
+  justify-content: center;
+  background-image: linear-gradient(to right top, #17212b, #1a2837, #1f2e44, #253551, #2e3b5e);
 
 }
-body{
+
+body {
   box-sizing: border-box;
   overflow: hidden;
-  margin:0px;
+  margin: 0px;
 }
 
-.SignUpContainer{
-  width:30vw;
+.SignUpContainer {
+  width: 30vw;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -22,34 +24,35 @@ body{
   min-height: 620px;
   margin-top: 10vh;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #17212B;
-  color:white;
+  color: white;
   min-width: 410px;
 }
 
-.SignUpContainer h2{
+.SignUpContainer h2 {
   text-align: center;
   font-size: 2rem;
   font-weight: 800;
-  font-family: 'Poppins','sans-serif';
+  font-family: 'Poppins', 'sans-serif';
   text-align: center;
   width: 8rem;
 }
 
-.SignUpContainer input,.SignUpContainer button{
+.SignUpContainer input,
+.SignUpContainer button {
   width: 20rem;
   height: 3rem;
   border-radius: 5px;
-  border:1px solid black;
+  border: 1px solid black;
   font-size: 1.2rem;
   padding-left: 10px;
   box-sizing: border-box;
   margin-bottom: 25px;
-  color:black;
+  color: black;
 }
 
-.SignUpContainer button div{
+.SignUpContainer button div {
   /* background-image: url('../../assets/google.png'); */
   width: 25px;
   height: 25px;
@@ -58,53 +61,58 @@ body{
   margin-right: 10px;
 }
 
-.SignUpContainer button{
+.SignUpContainer button {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
 
-.SignUpContainer label{
+.SignUpContainer label {
   font-size: 1rem;
   margin-bottom: 10px;
 }
 
-.SignUpContainer button[type='submit']{
+.SignUpContainer button[type='submit'] {
   background-color: #6ab2f2;
-  border:none;
+  border: none;
   outline: none;
-  color:white;
+  color: white;
 }
 
-.SignUpForm{
+.SignUpContainer button[type='submit']:disabled{
+  cursor: default;
+  background-color: #3c59a8;
+}
+
+.SignUpForm {
   display: flex;
   flex-direction: column;
 }
 
-.SignUpContainer h6{
+.SignUpContainer h6 {
   text-align: center;
   font-size: 1.2rem;
   font-weight: 500;
   margin-top: -5px;
 }
 
-.SignUpContainer h6 a{
-  color:blue;
+.SignUpContainer h6 a {
+  color: blue;
   cursor: pointer;
 }
 
-.SignUpContainer h4{
+.SignUpContainer h4 {
   text-align: end;
   margin: 0px 0px 20px 0px;
 }
 
-.SignUpContainer h4 a{
+.SignUpContainer h4 a {
   text-decoration: none;
   cursor: pointer;
 }
 
-.userExists{
+.userExists {
   width: fit-content;
   margin-top: 40vh;
   display: flex;
@@ -112,23 +120,69 @@ body{
   align-items: center;
 }
 
-.userExists div{
+.userExists div {
   margin: 20px;
   text-transform: capitalize;
   font-size: 1.5rem;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color:white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
   font-weight: 800;
 }
 
-.userExists button{
+.userExists button {
   width: 7rem;
   height: 2.5rem;
   font-size: 1.2rem;
   border-radius: 20px;
-  border:none;
-  outline:none;
-  background-color:violet;
-  color:black;
+  border: none;
+  outline: none;
+  background-color: violet;
+  color: black;
   cursor: pointer;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.load {
+  position: absolute;
+  top: 20%;
+  left: 45%;
+  z-index: 100;
+  width: 100px;
+  height: 100px;
+  margin: 110px auto 0;
+  border: solid 10px blueviolet;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  -webkit-transition: all 0.5s ease-in;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 1.0s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+  transition: all 0.5s ease-in;
+  animation-name: rotate;
+  animation-duration: 1.0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }

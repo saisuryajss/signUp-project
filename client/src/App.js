@@ -11,8 +11,10 @@ function App() {
     const nameRef = useRef();
     const dispatch = useDispatch();
     const user = useSelector(state=>state.user);
+    const loading = useSelector(state=>state.loading)
 
     function handleLogOut(event){
+      dispatch({type:"START"});
       dispatch({type:userActionTypes.SIGN_OUT});
     }
 
@@ -27,6 +29,7 @@ function App() {
         toast.error('Password length be between 8 to 16');
         return
       }
+      dispatch({type:"START"});
       dispatch({type:userActionTypes.SIGN_UP_START
         ,payload:{
           name:nameRef.current.value,
@@ -38,6 +41,11 @@ function App() {
 
   return (
     <div className="App">
+      {
+        loading?
+        <div className='load'></div>
+        :<></>
+      }
       <Toaster />
       {
         user?
@@ -71,7 +79,7 @@ function App() {
               <label>Re-Password</label>
               <input placeholder='password' type='password' ref={repasswordRef} required />
   
-              <button type='submit'>Submit</button>
+              <button type='submit' disabled={loading}>Submit</button>
             </div>
           </form>
         </div>

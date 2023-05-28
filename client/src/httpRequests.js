@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URI = process.env.REACT_APP_BASE||'http://localhost:5000/api/';
+const BASE_URI = process.env.REACT_APP_BASE ||'http://localhost:5000/api/';
 const INVALID_DATA = {
     status: 'error',
     message: 'missing or invalid data'
@@ -34,7 +34,7 @@ async function serverRequest(url, method, data, headers) {
     }
     catch (error) {
         console.log(error);
-        if (error.response.data) {
+        if (error && error.response &&error.response.data) {
             const { message } = error.response.data;
             const responseData = {
                 status: 'error',

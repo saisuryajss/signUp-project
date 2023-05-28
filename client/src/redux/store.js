@@ -6,12 +6,14 @@ import {combineReducers,configureStore} from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage/session';
 import userReducer from './userSlice';
 import userActionTypes from './userActionTypes';
+import loadingReducer from './loadingSlice'
 
 
 const sagaMiddleware = createSagaMiddleware();
 
 const combinedReducers = combineReducers({
     user: userReducer,
+    loading:loadingReducer
 });
 
 const rootReducer = (state, action) => {
