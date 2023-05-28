@@ -1,0 +1,25 @@
+{
+  "name": "signup-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-client": "cd client/ && npm install && npm run build",
+    "build-server": "cd server/ && npm install",
+    "build": "npm run build-server && npm run build-client",
+    "server": "npm run start --prefix server",
+    "client": "npm start --prefix client",
+    "start": "npm run server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saisuryajss/signUp-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saisuryajss/signUp-project/issues"
+  },
+  "homepage": "https://github.com/saisuryajss/signUp-project#readme"
+}
